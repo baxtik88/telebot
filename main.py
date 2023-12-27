@@ -14,4 +14,9 @@ async def start(message: types.Message):
     await message.answer('Здравствуйте уважаемый посетитель!', reply_markup=markup)
 
 
+@dp.message_handler(content_types=['web_app_data'])
+async def web_app(message: types.Message):
+    await message.answer(message.web_app_data.data)
+
+
 executor.start_polling(dp)
