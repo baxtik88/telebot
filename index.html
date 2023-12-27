@@ -19,7 +19,7 @@
     <button id="buy">Купить</button>
 </div>
 
-<form id="form>">
+<form id="form">
     <input type="text" placeholder="Имя" id="user_name">
     <input type="text" placeholder="Email" id="user_email">
     <input type="text" placeholder="Телефон" id="user_phone">
@@ -32,16 +32,16 @@
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById("buy");
     let order = document.getElementById("order");
-    tg.apend()
+    // tg.apend()
 
     buy.addEventListener("click", () => {
         document.getElementById("main").style.display = "none";
         document.getElementById("form").style.display = "block";
         document.getElementById("user_name").value = tg.iniDataUnsafe.user.first_name + " " + tg.iniDataUnsafe.user.last_name
     });
-    order.addEventListener("click", ()=>{
+    order.addEventListener("click", () => {
         tg.close()
-    } )
+    });
 
 
 </script>
