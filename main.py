@@ -17,7 +17,7 @@ async def start(message: types.Message):
 @dp.message_handler(content_types=['web_app_data'])
 async def web_app(message: types.Message):
     res = json.loads(message.web_app_data.data)
-    await message.answer(f'Name : {res["name"]}\n ; Emale : {res["email"]}\n ; Phone : {res["phone"]}\n')
+    await message.answer(f'Name : {res["name"]} ;\n Emale : {res["email"]} ;\n Phone : {res["phone"]}')
 
 
 executor.start_polling(dp)

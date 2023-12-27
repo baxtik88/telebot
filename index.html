@@ -45,6 +45,7 @@
         let name = document.getElementById("user_name").value;
         let email = document.getElementById("user_email").value;
         let phone = document.getElementById("user_phone").value;
+        tg.close();
 
         // if (name.length < 2) {
         //     document.getElementById("error").innerText = "Ошибка в имени";
@@ -67,7 +68,6 @@
 
         tg.sendData(JSON.stringify(data));
 
-        tg.close();
     });
 
 
