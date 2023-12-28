@@ -36,6 +36,9 @@
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById("buy");
     let order = document.getElementById("order");
+    tg.expand = function () {
+
+    };
     tg.expand();
 
     buy.addEventListener("click", () => {
@@ -69,7 +72,7 @@
         }
 
         tg.sendData(JSON.stringify(data));
-        tg.close();
+        tg.close()
 
     });
 
