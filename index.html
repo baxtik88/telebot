@@ -47,6 +47,8 @@
 
     });
     order.addEventListener("click", () => {
+        document.getElementById("main").style.display = "none";
+        document.getElementById("form").style.display = "block";
         document.getElementById("error").innerText = '';
         let name = document.getElementById("user_name").value;
         let email = document.getElementById("user_email").value;
